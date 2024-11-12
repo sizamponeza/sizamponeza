@@ -1,0 +1,211 @@
+
+let A = 4 + 7;
+let B = 5 * 9;
+let C = B / A;
+console.log(C)
+
+let X = 32;
+if(x=9){
+console.log("True");
+}else{
+  console.log("False");
+}
+let Y = "Green";
+if(Y=="Blue"){
+  console.log("Blue detected");
+}else if(Y=="Green"){
+  console.log("Green detected");
+}else{
+  console.log("No blue or green detected");
+}
+
+let i = 2;
+while(i < 12){
+  i ++;
+  console.log(i);
+}
+console.log("=====")
+for(let i = 2; i < 12; i++){
+  console.log(i);
+}
+console.log("====");
+  // ARRAYS
+
+
+//FOR LOOP
+
+
+//LOGICAL 
+let arr = [3, 10, 9, 5, 2, 11, 7, 15, 12, 4, 1, 13, 6, 14, 8];
+console.log(arr)
+
+
+
+for(let i = 3; i < 13; i ++)
+  
+  arr.push(i);
+  console.log(arr);
+
+
+
+arr = [3, 10, 9, 5, 2, 11, 7, 15, 12, 4, 1, 13, 6, 14, 8];
+
+for(let i = 3; i <  16; i ++){
+  console.log(i);
+  let num = 20;
+  if(num > 3 && num < 9){
+    console.log(i);
+  }
+}
+
+
+let s = "siza mponeza";
+console.log(s);
+
+
+
+factolize a number//
+
+function factorialize(num) {
+let output = 1;
+
+for(let i = 1; i <= num; i++){
+ output *= i;  
+}
+ return output;
+}
+
+let result = factorialize(5);
+console.log(result);
+
+
+//reverse a string
+
+function reverseString(str) {
+  let output = ""
+    for(let i = str.length -1; i >= 0; i--) {
+    output += str[i];
+  }
+  return output;
+}
+
+let result = reverseString("Greetings from Earth");
+console.log(result);
+
+
+//truncate / choping /cutting a string
+
+function truncateString(str, num) {
+  let output = str.substring(0, num);
+if(output.length<str.length) {
+  output += "...";
+}
+  return output;
+}
+
+let result = truncateString("A-tisket a-tasket A green and yellow basket", 8);
+console.log(result);
+  
+ //OUTPUT
+
+A-tisket...
+
+//where do I belong
+
+function getIndexToIns(arr, num) {
+  let belong = 0;
+for(let i = 0; i < arr.length; i++){
+  if(arr[i]<num){
+    belong++;
+  };
+}
+console.log(belong);
+return belong;
+}
+ getIndexToIns([40, 60], 50);
+
+//OUTPUT
+1
+
+
+
+
+
+
+
+
+
+function convertHTML(str) {
+  // Use Object Lookup to declare as many HTML entities as needed.
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+  //Use map function to return a filtered str with all entities changed automatically.
+  return str
+    .split("")
+    .map(entity => htmlEntities[entity] || entity)
+    .join("");
+}
+
+// test here
+convertHTML("Dolce & Gabbana");
+
+
+
+function countingValleys(steps, path) {
+    // Write your code here
+    let numberOfValleyTraversed=1;
+    for (let i=0; i<numberOfValleyTraversed.length; i++){
+        if(numberOfValleyTraversed===1){
+            numberOfValleyTraversed=true;
+        }else if(numberOfValleyTraversed!=1){
+             numberOfValleyTraversed=false;
+        }else{
+             numberOfValleyTraversed=1;
+        }
+    }
+return numberOfValleyTraversed;
+}
+
+
+
+
+
+
+
+function countingValleys(steps, path) {
+    // Write your code here
+  
+    let numberOfValleyTraversed = 0;
+    let level = 0;
+    
+    for(let i = 0; i < steps; i++) {
+        if(path[i] == 'U'){ 
+            level++;
+            if(level == 0) {
+                numberOfValleyTraversed++;
+            }
+        } else {
+            level--;
+        }
+    }
+    return numberOfValleyTraversed;
+}
+
+
+
+function sockMerchant(n, ar) {
+let numberOfPairs = 0;
+    ar.sort();
+    for(let i=0; i<n;i++){
+        if(ar[i] == ar[i+1]){
+            i++;
+            numberOfPairs++;
+           }
+    }
+return numberOfPairs;
+}
